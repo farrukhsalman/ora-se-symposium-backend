@@ -95,7 +95,7 @@ kubernetes-deploy:
         token: $KUBE_USER_TOKEN
         insecure-skip-tls-verify: true
         cwd: $WERCKER_ROOT/.
-        command: -n oci-challenge-ns apply -f 'backend-api-deployment.yaml'
+        command: -n oci-challenge-ns apply -f backend-api-deployment.yaml
         
   after-steps:
     - install-packages:
