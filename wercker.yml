@@ -60,7 +60,7 @@ kubernetes-deploy:
         cwd: $WERCKER_ROOT/.
   
     - script:
-        name: Remove template files
+        name: Remove template files Farrukh
         cwd: $WERCKER_ROOT/.
         code: |
           rm *.template.yaml
