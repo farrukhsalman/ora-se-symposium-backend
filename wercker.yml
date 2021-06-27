@@ -42,7 +42,7 @@ docker-build:
   after-steps:
     - install-packages:
         packages: ruby
-    - farrukhsalman/pretty-slack-notify@0.3.6:
+    - pasonatquila/pretty-slack-notify@0.3.6:
         webhook_url: $SLACK_URL
         channel: $SLACK_CHANNEL
 
@@ -104,6 +104,6 @@ kubernetes-deploy:
   after-steps:
     - install-packages:
         packages: ruby
-    - farrukhsalman/pretty-slack-notify@0.3.6:
+    - pasonatquila/pretty-slack-notify@0.3.6:
         webhook_url: $SLACK_URL
         channel: $SLACK_CHANNEL
