@@ -104,6 +104,10 @@ kubernetes-deploy:
   after-steps:
     - install-packages:
         packages: ruby
+    - script:
+        name: echo 'By Farrukh'
+        code: | 
+          gem install bundler:1.11.2
    # - pasonatquila/pretty-slack-notify@0.3.6:
    #     webhook_url: $SLACK_URL
    #     channel: $SLACK_CHANNEL
