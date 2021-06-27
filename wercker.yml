@@ -82,12 +82,13 @@ kubernetes-deploy:
 #        cwd: $WERCKER_ROOT/.
 #        command: -n $K8SNAMESPACE delete secret $OCIR_SECRET_NAME
 
-#    - kubectl:
-#        server: $KUBE_ENDPOINT
-#        token: $KUBE_USER_TOKEN
-#        insecure-skip-tls-verify: true
-#        cwd: $WERCKER_ROOT/.
-#        command: -n oci-challenge-ns create secret docker-registry $OCIR_SECRET_NAME --docker-server='$PRIVATE_REGISTRY_PATH' --docker-username='$PRIVATE_REGISTRY_USERNAME' --docker-password='$API_USER_TOKEN' --docker-email='farrukh.salman@oracle.com' 
+    - kubectl:
+        server: $KUBE_ENDPOINT
+        token: $KUBE_USER_TOKEN
+        insecure-skip-tls-verify: true
+        cwd: $WERCKER_ROOT/.
+        command: get pods -A
+#        -n oci-challenge-ns create secret docker-registry $OCIR_SECRET_NAME --docker-server='$PRIVATE_REGISTRY_PATH' --docker-username='$PRIVATE_REGISTRY_USERNAME' --docker-password='$API_USER_TOKEN' --docker-email='farrukh.salman@oracle.com' 
 #         command: -n oci-challenge-ns create secret docker-registry $OCIR_SECRET_NAME --docker-server='$PRIVATE_REGISTRY_PATH' --docker-username='$PRIVATE_REGISTRY_USERNAME' --docker-password='$API_USER_TOKEN' --docker-email='farrukh.salman@oracle.com' 
       
     - kubectl:
