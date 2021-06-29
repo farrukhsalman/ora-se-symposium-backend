@@ -8,7 +8,7 @@ dev:
         reload: true
         
 build:
-  # The steps that will be executed on build
+  # The steps that will be executed on build by farrukh
   # Steps make up the actions in your pipeline
   # Read more about steps on our dev center:
   # https://devcenter.wercker.com/development/steps/
